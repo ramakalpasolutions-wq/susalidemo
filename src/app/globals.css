@@ -36,7 +36,19 @@
    SUSALI — CAIRNS BLUE & TEAL / SOFT GLASS DESIGN SYSTEM (2026)
    A distinct visual system inspired by contemporary soft-healthtech UI.
    ==================================================================== */
-:root{--navy:#143F56;--navy2:#155177;--blue:#176D95;--cyan:#64A1A2;--ink:#183647;--muted:#637B85;--pale:#F4FAFB;--line:#DDEBEF;--white:#fff;--og-slate:#143F56;--og-taupe:#527B7F;--og-berry:#A6CECB;--og-lilac:#64A1A2;--og-blue:#176D95;--og-ink:#183647}
+
+:root {
+  --navy: #444A58;
+  --navy2: #546481;
+  --blue: #546481;
+  --cyan: #B995B9;
+  --ink: #2B303C;
+  --muted: #6F7181;
+  --pale: #F8F6FC;
+  --line: #E9E5EE;
+  --white: #FFFFFF;
+}
+  
 html{scroll-padding-top:96px}
 body{color:var(--og-ink);background:#FAFCFC;font-family:Inter,"Avenir Next",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
 main{overflow:clip}
