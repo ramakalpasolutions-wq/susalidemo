@@ -1,62 +1,53 @@
-# SUSALI — Cairns Glass Healthcare Website
+# SUSALI — Cairns Glass Marketing Website
 
-A **premium, responsive, static advertising website** with a soft Cairns Blue & Teal palette, original CSS-based medical artwork, frosted-glass UI, subtle ambient animation, and interactive healthcare journey. Built using **Next.js App Router**, **JavaScript**, **Tailwind CSS 4**, **React Compiler**, and **Lucide React**. No login, admin panel, backend, or database.
+Static, frontend-only six-page Next.js website using App Router, JavaScript, Tailwind CSS 4, React Compiler and Lucide icons. Includes responsive Cairns Blue & Teal glass-style visuals, floating cards, a clickable eight-stage care journey, searchable categorized FAQs and a contact enquiry composer. **No database, patient accounts, clinical records, or admin panel are implemented in this promotional website.**
 
-## Quick start (Mac / VS Code)
+## Pages
+
+- `/` — patient journey overview, six services, eight-stage interactive process, medical records and healthcare network
+- `/about` — who SUSALI is, mission, vision, values, three-part operating approach
+- `/services` — six service areas and eight-stage referral-to-follow-up journey
+- `/healthcare-network` — patient, dispensary, superintendent, coordination and hospital roles; care pathways
+- `/faqs` — search and filter through questions about registration, referrals, treatment and hospital-uploaded records
+- `/contact` — official contact placeholders and copy/email enquiry composer
+
+## Getting started
 
 ```bash
-cd susali-cairns-glass
 npm install
 npm run dev
 ```
 
-Open http://localhost:3000. Requires Node.js 20.9+ (Node 22 recommended).
+Open `http://localhost:3000` to review. Validate a production static build with `npm run build`. Static export is enabled in `next.config.mjs`.
 
-## Static production build
+## Updating content
 
-```bash
-npm run build
-```
+Most reusable copy is located in `src/data/site.js`:
 
-The Next.js config uses `output: 'export'`; compiled static files appear in `out/`. Deploy to Vercel or another static hosting service.
+- `site` contains the site tagline and **verified contact data** (currently blank).
+- `services` contains the six published service descriptions and detailed points.
+- `journey` contains eight stages used across the homepage and Services page.
+- `recordTypes` contains the medical document overview.
+- `networkGroups` lists healthcare roles, not named or presumed hospital partners.
+- `faqs` contains the question-and-answer library with categories.
 
-## Pages
+The six page components are located in `src/app/`. UI and interaction components are in `src/components/`. Changes to shared glass styles and additional content cards are in `src/app/globals.css`.
 
-- `/` — Homepage, animated frosted-glass hero, service cards, and interactive care journey
-- `/about` — Organization, mission and vision
-- `/services` — Six service areas
-- `/healthcare-network` — Network vision and collaboration
-- `/faqs` — Filterable accordion FAQs
-- `/contact` — Contact links and an enquiry message composer
+## Before publication: verify the following
 
-## Files to customize
+1. SUSALI's official expanded name, background, legal identity and eligibility requirements.
+2. The exact patient registration channel and the separate patient-portal URL (`site.patientPortalUrl`). Do not link to a guessed portal.
+3. Whether a **doctor-recommended follow-up for the same condition** needs another superintendent referral. This is currently marked unconfirmed in the site content.
+4. When, how, and through which channels hospital appointments are communicated.
+5. Exactly which documents hospital staff must upload after treatment, and what patients may access.
+6. Official partner hospitals, specialties, geographical coverage and any claimed security guarantees.
+7. Official email, phone, WhatsApp, office address and map URL; edit `site` to display these.
+8. Privacy Policy and Terms of Use reviewed for the real SUSALI operational platform. This marketing site does not receive medical data.
 
-- `src/app/page.js` — Homepage content and sections
-- `src/app/globals.css` — Original styling plus appended Cairns Blue & Teal glass design system
-- `src/components/OmbreExperience.jsx` — Glass hero visual and interactive journey
-- `src/components/Header.jsx` — Responsive sticky navigation
-- `src/data/site.js` — Content, FAQ, actual contact details
+## Contact enquiry behavior
 
-## Important pre-launch checklist
+No external form endpoint is connected. When an official email is supplied in `site.email`, the contact form opens the visitor's email application with a prepared message. Without it, the form copies the enquiry or opens the visitor's email application with no recipient. It does **not** transmit or store messages. The page explicitly instructs visitors **not to include patient IDs, prescriptions, diagnoses or other sensitive medical details** in its public enquiry form.
 
-1. Replace draft service descriptions and organizational claims with formally approved SUSALI wording.
-2. Fill out real email, phone, address, WhatsApp and location in `src/data/site.js` (they are deliberately blank).
-3. Replace draft logo treatment with the official logo and set your canonical domain if available.
-4. Verify network partner information before using logos, counts or hospital names.
-5. The contact form **does not send data**: until an email is configured, it copies the enquiry text; with an email configured it opens the visitor's email application. For actual automatic form delivery use a trusted hosted form endpoint.
-6. Test `npm run build` and run accessibility/performance QA before production deployment.
+## Project validation
 
-## Build verification limitation
-
-The project was prepared in an environment where npm registry DNS resolution was unavailable (`EAI_AGAIN`). Therefore dependency installation and the Next.js production build could **not** be completed there. Run `npm install && npm run build` in your development environment to verify compatibility.
-
-## Approved Cairns palette
-
-- Cairns Blue `#176D95`
-- Dark Cerulean `#155177`
-- Hydroport Teal `#64A1A2`
-- Berwick Blue `#6F86A6`
-- Mossy Mist `#7D9D7D`
-- Light frosted surface `#F4FAFB`
-
-Ombre Blue was replaced by the Cairns color family while retaining the original glassmorphism design and interactions.
+All project JavaScript and JSX was syntax-checked using TypeScript's parser, and the CSS parsed with PostCSS. A full `npm install` / Next.js build could not be completed in the artifact environment because `registry.npmjs.org` was unreachable (DNS `EAI_AGAIN`). Run `npm install && npm run build` locally before deployment.

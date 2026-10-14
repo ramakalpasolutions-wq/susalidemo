@@ -102,3 +102,77 @@ h1,h2,h3,h4{letter-spacing:-.055em}
 .og-final-card .og-pill-primary:hover{background:#DCF5F2}
 .og-navigation a:focus-visible,.og-nav-cta:focus-visible,.og-pill-button:focus-visible,.og-next-step:focus-visible,.og-journey-tabs button:focus-visible{outline:3px solid #176D95;outline-offset:4px}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.og-orb,.og-floating-card,.og-network-node,.og-network-ring,.og-sculpture,.og-intro-orb{animation:none!important}}
+
+/* ================================================================
+   SUSALI CONTENT V1 — CAIRNS GLASS / PATIENT JOURNEY ENHANCEMENTS
+   ================================================================ */
+.susali-journey-tabs{grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.susali-journey-tabs button{min-height:60px}
+.susali-journey-note{margin:24px auto 0;max-width:920px;display:flex;align-items:flex-start;gap:12px;padding:16px 20px;background:rgba(255,255,255,.68);border:1px solid #C6E3E3;border-radius:16px;color:#385F69;font-size:13px;line-height:1.65;box-shadow:0 10px 30px #39748B0A}
+.susali-journey-note svg{flex:0 0 18px;margin-top:2px;color:#176D95}
+.susali-records{background:linear-gradient(135deg,#F4FAFB,#EAF5F7 57%,#F7FAFB)}
+.susali-records-grid{margin-top:44px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.susali-record-card,.susali-approach-grid article,.susali-pathway-card{border:1px solid rgba(255,255,255,.9);border-radius:23px;background:rgba(255,255,255,.66);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);box-shadow:0 17px 38px #33698110,inset 0 1px rgba(255,255,255,.8);padding:28px;transition:transform .3s,box-shadow .3s,border-color .3s}
+.susali-record-card:hover,.susali-approach-grid article:hover,.susali-pathway-card:hover{transform:translateY(-5px);box-shadow:0 25px 48px #3369811B;border-color:#B9DCDD}
+.susali-record-icon{width:52px;height:52px;display:grid;place-items:center;background:linear-gradient(140deg,#E1F0F3,#CAE7E8);border:1px solid #fff;border-radius:15px;color:#176D95;margin-bottom:20px}
+.susali-record-card h3,.susali-approach-grid h3,.susali-pathway-card h3{font-size:19px;line-height:1.3;margin-bottom:11px;letter-spacing:-.035em;color:#183647}
+.susali-record-card p,.susali-approach-grid p,.susali-pathway-card p{font-size:13px;color:#637B85;line-height:1.75;margin-bottom:0}
+.susali-feature-banner{margin-top:34px;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:33px 38px;border-radius:26px;background:linear-gradient(110deg,#155177,#176D95 60%,#64A1A2);color:#fff;position:relative;overflow:hidden}
+.susali-feature-banner .og-kicker{color:#CBE9E9}
+.susali-feature-banner h3{font-size:clamp(22px,3vw,31px);margin:13px 0 9px}
+.susali-feature-banner p{font-size:14px;max-width:650px;color:#E0F4F7;margin:0}
+.susali-feature-banner-icon{flex:0 0 90px;height:90px;border-radius:25px;display:grid;place-items:center;background:#FFFFFF25;border:1px solid #FFFFFF70;color:white}
+.susali-about-approach{background:#F3F9F9}
+.susali-approach-grid{margin-top:36px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.susali-approach-grid article>svg,.susali-pathway-card>svg{color:#176D95;margin-bottom:21px}
+.susali-small-disclaimer{font-size:12px;color:#637B85;line-height:1.75;margin:28px 0 0}
+.susali-feature-list{padding:0;margin:0 0 20px;list-style:none;display:grid;gap:9px}
+.susali-feature-list li{display:flex;align-items:flex-start;gap:10px;font-size:12px;color:#4B7280;line-height:1.55}
+.susali-feature-list li svg{flex:0 0 15px;margin-top:2px;color:#278C92}
+.susali-card-tag{display:block;margin-top:20px;color:#3A919A}
+.susali-network-groups{grid-template-columns:repeat(5,minmax(0,1fr));gap:13px}
+.susali-network-groups .network-group{padding:22px}
+.susali-network-groups .network-group h3{font-size:17px}
+.susali-pathway-grid{margin-top:40px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:17px}
+.susali-collaboration{background:#F6FAFB}
+.susali-faq-search{border:1px solid #D7E6EB;border-radius:13px;background:#fff;display:flex;align-items:center;gap:12px;padding:0 17px;margin-bottom:20px;color:#45839C;box-shadow:0 10px 22px #39748B0A}
+.susali-faq-search input{border:0;outline:0;min-height:50px;width:100%;background:transparent;color:#183647;font-size:13px}
+.susali-faq-search:focus-within{border-color:#176D95;box-shadow:0 0 0 3px #176D951A}
+.susali-faq-empty{padding:20px;font-size:14px;color:#637B85;background:#F3F9F9;border-radius:12px}
+.susali-privacy-reminder{font-size:12px;line-height:1.6;background:#E8F3F5;border-left:3px solid #176D95;border-radius:7px;padding:13px 15px;color:#3B6170;margin:0}
+.contact-small-note{display:flex;gap:10px;align-items:flex-start}
+.contact-small-note svg{flex:0 0 17px;margin-top:2px}
+@media(max-width:1080px){.susali-network-groups{grid-template-columns:repeat(3,minmax(0,1fr))}.susali-pathway-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:850px){.susali-records-grid,.susali-approach-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.susali-journey-tabs{grid-template-columns:repeat(2,minmax(0,1fr))}.susali-network-groups{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:580px){.susali-records-grid,.susali-approach-grid,.susali-network-groups,.susali-pathway-grid{grid-template-columns:1fr}.susali-journey-tabs{grid-template-columns:repeat(2,minmax(0,1fr))}.susali-journey-tabs button{min-height:56px;padding:12px 8px;font-size:11px;gap:7px}.susali-feature-banner{padding:27px 23px}.susali-feature-banner-icon{display:none}.susali-record-card,.susali-approach-grid article,.susali-pathway-card{padding:23px}.susali-journey-note{padding:13px 15px}}
+
+/* SUSALI dedicated multipage architecture — concise landing page previews */
+.susali-home-service-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.susali-home-process{background:linear-gradient(145deg,#EFF8FA,#F7FBFB 62%,#E7F5F2)}
+.susali-home-process-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin-top:42px}
+.susali-home-process-step{border:1px solid rgba(255,255,255,.95);background:rgba(255,255,255,.6);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-radius:24px;padding:24px;box-shadow:0 18px 40px #28566C11;transition:transform .25s ease,box-shadow .25s ease}
+.susali-home-process-step:hover{transform:translateY(-5px);box-shadow:0 23px 43px #28566C20}
+.susali-home-step-number{color:#6A9AA9;font-size:11px;font-weight:850;letter-spacing:.13em}
+.susali-home-step-symbol{width:58px;height:58px;display:grid;place-items:center;color:#176D95;border:1px solid #fff;border-radius:18px;background:linear-gradient(140deg,#DAEFF0,#EAF8FB);margin:22px 0}
+.susali-home-process-step h3{font-size:17px;letter-spacing:-.04em;margin:0;color:#183647}
+.susali-home-centered-link{display:flex;justify-content:center;margin-top:36px}
+.susali-home-record-highlight{background:#fff}
+.susali-home-record-panel{display:grid;grid-template-columns:1.1fr .9fr;gap:9%;align-items:center}
+.susali-home-record-panel h2{font-size:clamp(35px,4.5vw,56px);line-height:1.14;margin:19px 0;color:#17384C}
+.susali-home-record-panel h2 em{font-style:normal;color:#34899A}
+.susali-home-record-panel p{color:#637B85;font-size:16px;max-width:580px;margin-bottom:26px}
+.susali-home-record-visual{position:relative;min-height:300px;display:grid;place-items:center;border-radius:36px;overflow:hidden;background:radial-gradient(circle at 50% 35%,#E4F5F3,#B8DDE5 70%,#A7CBD9);border:1px solid #E9FBFF;box-shadow:0 24px 55px #2A708224,inset 0 1px 0 #fff}
+.susali-home-record-visual:before,.susali-home-record-visual:after{content:'';position:absolute;width:300px;height:300px;border:1px solid #ffffffa6;border-radius:50%}
+.susali-home-record-visual:after{width:230px;height:230px;border-style:dashed}
+.susali-home-record-visual>div{z-index:1;display:grid;justify-items:center;gap:12px;color:#176D95;background:rgba(255,255,255,.55);backdrop-filter:blur(15px);border:1px solid white;border-radius:25px;padding:34px;box-shadow:0 20px 42px #23678022}
+.susali-home-record-visual span{color:#155177;font-size:13px;font-weight:800}
+.susali-home-final-links{background:#F3F9FA}
+.susali-home-final-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.susali-home-nav-card{display:block;background:rgba(255,255,255,.75);border:1px solid white;border-radius:28px;padding:36px;box-shadow:0 16px 38px #2155790D;transition:transform .28s ease,box-shadow .28s ease}
+.susali-home-nav-card:hover{transform:translateY(-6px);box-shadow:0 22px 45px #21557921}
+.susali-home-nav-card>span{width:58px;height:58px;background:#E3F2F3;color:#176D95;display:grid;place-items:center;border-radius:17px;margin-bottom:23px}
+.susali-home-nav-card h3{font-size:27px;color:#17384C;margin:0 0 12px}
+.susali-home-nav-card p{font-size:14px;color:#637B85;margin-bottom:25px;max-width:400px}
+.susali-home-nav-card strong{display:inline-flex;align-items:center;gap:9px;color:#176D95;font-size:13px}
+@media(max-width:850px){.susali-home-process-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.susali-home-record-panel{grid-template-columns:1fr;gap:35px}.susali-home-service-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:580px){.susali-home-process-grid,.susali-home-final-grid,.susali-home-service-grid{grid-template-columns:1fr}.susali-home-process-step{padding:20px}.susali-home-record-visual{min-height:255px}.susali-home-nav-card{padding:27px}}
